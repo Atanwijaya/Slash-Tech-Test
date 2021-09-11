@@ -1,0 +1,33 @@
+[
+  {
+    "outputFileName": "wwwroot/js/lib/slash.dependencies.bundle.js",
+    "inputFiles": [
+      "wwwroot/js/lib/jquery.js",
+      "wwwroot/js/lib/popper.js",
+      "wwwroot/js/lib/bootstrap.js",
+      "wwwroot/js/lib/jquery.validate.min.js",
+      "wwwroot/js/lib/moment.js",
+      "wwwroot/js/lib/dataTable.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "outputMode": "singleLine",
+      "renameLocals": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/css/lib/slash.dependencies.bundle.css",
+    "inputFiles": [
+      "wwwroot/css/lib/bootstrap.css",
+      "wwwroot/css/lib/font-awesome.css",
+      "wwwroot/css/lib/dataTable.css"
+    ],
+    "minify": {
+      "enabled": true,
+      "outputMode": "singleLine",
+      "renameLocals": true
+    },
+    "sourceMap": false
+  }
+]

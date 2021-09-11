@@ -1,0 +1,36 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<div class="d-flex flex-column slash-vh-100">
+    <div class="d-flex flex-column slash-flex-grow-1 justify-content-center align-items-center asplaw-flex container text-center">
+        <div class="container text-left">
+            <button class="btn btn-primary" onclick="window.location.href = window.location.origin + '/Login'">Go to Login</button>
+        </div>
+        <div class="card">
+            <div class="card-header bg-info text-white"><h5>TODO Task</h5></div>
+            <div class="card-body text-left">
+                <div class="form-group">
+                    <label>Task Name</label>
+                    <input type="text" class="form-control" id="TaskName" value="">
+                </div>
+                <div class="form-group">
+                    <label>Due Date</label>
+                    <input type="date" class="form-control" id="DueDate">
+                </div>
+            </div>
+            <div class="card-footer bg-info text-white">
+                <button type="submit" data-action="create" id="BtnSubmit" class="button-form-validation btn btn-dark px-4 py-2 text-white font-weight-bold">Submit</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <table class="table table-bordered" id="tableContainer"></table>
+    </div>
+</div>
+@section Scripts{
+    <environment include="Production">
+        <script type="text/javascript" asp-append-version="true" src="~/js/TODOTask.js"></script>
+    </environment>
+    <environment include="Development">
+        <script type="text/javascript" asp-append-version="true" src="~/js/TODOTask.js"></script>
+
+    </environment>
+}

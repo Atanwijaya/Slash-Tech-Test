@@ -1,0 +1,27 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model UserDTO
+<div class="d-flex flex-column slash-vh-100">
+    <div class="d-flex flex-column slash-flex-grow-1 justify-content-center align-items-center asplaw-flex container text-center">
+        <div class="container text-left">
+            <button class="btn btn-primary" onclick="window.location.href = window.location.origin + '/TODOTask'">Go to TODO Task</button>
+        </div>
+        <div class="card">
+            <form method="post">
+                <div class="card-header bg-info text-white"><h5>Login @ViewBag.LoginResult</h5></div>
+                <div class="card-body text-left">
+                    <div class="form-group">
+                        <label>User Name</label>
+                        <input type="text" class="slash-login-username form-control" name="userName" asp-for="UserName">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" data-rule-required="true" class="slash-login-password  form-control" asp-for="Password">
+                    </div>
+                </div>
+                <div class="card-footer bg-info text-white">
+                    <button type="submit" formaction="/Login" class="button-form-validation btn btn-dark px-4 py-2 slash-btn-login text-white font-weight-bold asplaw-small-font-size">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
